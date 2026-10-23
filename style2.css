@@ -1,0 +1,1558 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    background: #bdd5d5;
+    min-height: 40px;
+    color: white;
+}
+
+.container {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 25px;
+    flex-wrap: wrap;
+}
+
+.container span {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background-color: #98918a;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    border-radius: 20%;
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #333;
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    min-height: 70px;
+    padding: 0 20px;
+    background: #f5f1d8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.image {
+    width: 100px;
+    height: 60px;
+    background: url("photos/logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand h2 {
+    color: #4b168c;
+    font-size: 23px;
+}
+
+.brand small {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #e85d04;
+}
+
+.nav-links button {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup {
+    color: #4b168c !important;
+}
+
+.order-btn {
+    background: #4b168c;
+    color: white !important;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+marquee {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HOME / HERO SECTION
+========================================= */
+
+#home {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#home img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+
+    color: white;
+    width: 500px;
+    max-width: 85%;
+
+    z-index: 2;
+}
+
+#content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+#content span {
+    color: red;
+}
+
+#content p {
+    color: #ebe4e4;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MENU SECTION
+========================================= */
+
+.menu {
+    text-align: center;
+    padding: 50px 8%;
+}
+
+.menu h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.menu > p {
+    color: #777;
+}
+
+.buttons {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #e85d04;
+    background: white;
+    color: #e85d04;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: #e85d04;
+    color: white;
+}
+
+
+/* =========================================
+   FOOD ITEMS
+========================================= */
+
+.food-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food {
+    overflow: hidden;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s ease-in-out;
+    background: white;
+}
+
+.food:hover {
+    box-shadow: 0px 0px 10px 3px rgb(98, 84, 84);
+    transform: translateY(-10px);
+}
+
+.food img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.food h3 {
+    margin: 12px 0 5px;
+}
+
+.food p {
+    color: #e85d04;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   COUPON
+========================================= */
+
+.coupon {
+    position: fixed;
+    right: 0;
+    bottom: 70px;
+
+    height: 80px;
+    width: 200px;
+
+    background-color: #f60606;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border: 2px solid black;
+    border-style: groove;
+
+    z-index: 999;
+}
+
+.coupon div {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTACT + RESERVATION SECTIONS
+========================================= */
+
+#contactpage,
+#reservationpage {
+    width: 100%;
+    min-height: 900px;
+}
+
+.both,
+.rboth {
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 5%;
+}
+
+
+/* =========================================
+   LEFT INFORMATION BOX
+========================================= */
+
+.box,
+.rbox {
+    background-color: #0f1111;
+
+    min-height: 550px;
+    width: 500px;
+    max-width: 100%;
+
+    margin: 10px;
+
+    border-radius: 10%;
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box p,
+.rbox p {
+    color: #aaa;
+}
+
+
+/* =========================================
+   CONTACT / RESERVATION HEADINGS
+========================================= */
+
+.contact_top,
+.r_top {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.contact_top h1,
+.r_top h1 {
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: red;
+}
+
+.contact_top span,
+.r_top span {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.35rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact_top p,
+.r_top p {
+    color: #777;
+    font-size: 0.93rem;
+    line-height: 1.8;
+
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* =========================================
+   INFORMATION ITEMS
+========================================= */
+
+.info,
+.rinfo {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.info_icon i,
+.rinfo_icon i {
+    width: 50px;
+    height: 50px;
+
+    background-color: rgb(88, 22, 22);
+    color: rgb(179, 8, 8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20%;
+    font-size: 20px;
+
+    margin-right: 10px;
+}
+
+.info_content {
+    min-width: 0;
+}
+
+.info_content h4,
+.rinfo_content h4 {
+    color: #aaa;
+    margin-bottom: 4px;
+}
+
+.info_content p,
+.rinfo .info_content p {
+    word-break: break-word;
+}
+
+.top,
+.rtop {
+    padding: 20px;
+}
+
+
+/* =========================================
+   SOCIAL ICON SECTION
+========================================= */
+
+#social-icons {
+    display: flex;
+    gap: 20px;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   CONTACT / RESERVATION FORM BOX
+========================================= */
+
+.rform,
+.form {
+    background-color: #bdd5d5;
+
+    /* min-height: 550px; */
+    min-height: 450px;
+    width: 500px;
+    max-width: 100%;
+
+    border-radius: 10%;
+
+    padding: 20px;
+}
+
+.form h3,
+.rform h3 {
+    text-align: center;
+    margin: 20px 10px 30px;
+
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+
+/* =========================================
+   FORMS
+========================================= */
+
+.form_details,
+.rform_details {
+    width: 100%;
+    max-width: 320px;
+    margin: 10px auto 30px;
+}
+
+.form_details label,
+.rform_details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_details input,
+.form_details select,
+.form_details textarea,
+.rform_details input,
+.rform_details select,
+.rform_details textarea {
+    width: 100%;
+    height: 35px;
+
+    font-size: 15px;
+    padding: 7px;
+
+    border: 1px solid black;
+    margin-bottom: 15px;
+
+    border-radius: 3px;
+}
+
+.form_details textarea,
+.rform_details textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+#btn,
+#r_btn {
+    background-color: #c01e12;
+
+    border: none;
+    color: white;
+
+    font-size: 16px;
+
+    border-radius: 50px;
+    padding: 15px 30px;
+
+    font-weight: 600;
+
+    display: block;
+
+    margin: 10px auto;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#btn:hover,
+#r_btn:hover {
+    background-color: #8f160d;
+    transform: translateY(-2px);
+}
+
+#cbutton a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    margin-top: 40px;
+    padding: 20px 50px 10px;
+    background: #f5f1d8;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer h3 {
+    color: #4b168c;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #4b168c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #e85d04;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+    padding-top: 8px;
+
+    text-align: center;
+    font-size: 12px;
+}
+
+.name_icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.spoon {
+    color: #bab5b5;
+}
+
+
+/* =========================================
+   LARGE TABLET / SMALL LAPTOP
+   1200px and below
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .food-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .both,
+    .rboth {
+        padding: 20px 3%;
+        gap: 20px;
+    }
+
+    .box,
+    .rbox,
+    .form,
+    .rform {
+        width: 48%;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   768px - 991px
+========================================= */
+
+@media (max-width: 991px) {
+
+    /* ---------- TOPBAR ---------- */
+
+    .container {
+        justify-content: center;
+        gap: 12px;
+        padding: 5px 15px;
+    }
+
+    .container span {
+        font-size: 12px;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        min-height: auto;
+        padding: 10px 15px;
+
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .order-btn {
+        padding: 8px 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    #home {
+        height: 500px;
+    }
+
+    #home img {
+        height: 500px;
+    }
+
+    #content {
+        left: 7%;
+        width: 80%;
+    }
+
+    #content h1 {
+        font-size: 40px;
+    }
+
+
+    /* ---------- MENU ---------- */
+
+    .menu {
+        padding: 45px 5%;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+    }
+
+    .food-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .food img {
+        height: 260px;
+    }
+
+
+    /* ---------- CONTACT + RESERVATION ---------- */
+
+    .both,
+    .rboth {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .box,
+    .rbox {
+        width: 48%;
+        min-height: 500px;
+        margin: 0;
+    }
+
+    .form,
+    .rform {
+        width: 48%;
+        min-height: 500px;
+        padding: 20px;
+    }
+
+    .form_details,
+    .rform_details {
+        width: 90%;
+        max-width: 320px;
+        margin: 10px auto 30px;
+    }
+
+    .form_details input,
+    .form_details select,
+    .form_details textarea,
+    .rform_details input,
+    .rform_details select,
+    .rform_details textarea {
+        width: 100%;
+    }
+
+    #btn,
+    #r_btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- COUPON ---------- */
+
+    .coupon {
+        width: 170px;
+        height: 70px;
+        font-size: 13px;
+        bottom: 25px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding: 20px 30px 10px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   767px and below
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* ---------- TOPBAR ---------- */
+
+    .topbar {
+        min-height: auto;
+    }
+
+    .container {
+        min-height: auto;
+        padding: 8px 10px;
+
+        justify-content: center;
+        gap: 6px 12px;
+    }
+
+    .container span {
+        font-size: 10px;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding: 8px 10px;
+        gap: 10px;
+
+        position: sticky;
+        top: 0;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image {
+        width: 70px;
+        height: 48px;
+    }
+
+    .brand h2 {
+        font-size: 20px;
+    }
+
+    .brand small {
+        font-size: 9px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 7px 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .order-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+
+    /* ---------- MARQUEE ---------- */
+
+    marquee {
+        font-size: 15px !important;
+        line-height: 30px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    #home {
+        height: 430px;
+    }
+
+    #home img {
+        height: 430px;
+        object-fit: cover;
+    }
+
+    #content {
+        left: 5%;
+        width: 90%;
+        max-width: 90%;
+        top: 50%;
+    }
+
+    #content h1 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    #content p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 12px;
+    }
+
+
+    /* ---------- MENU ---------- */
+
+    .menu {
+        padding: 40px 5%;
+    }
+
+    .menu h2 {
+        font-size: 28px;
+    }
+
+    .menu > p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        margin: 20px 0;
+        gap: 3px;
+    }
+
+    .buttons button {
+        padding: 8px 14px;
+        margin: 3px;
+        font-size: 13px;
+    }
+
+    .food-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food img {
+        height: 250px;
+    }
+
+
+    /* ---------- COUPON ---------- */
+
+    .coupon {
+        width: 145px;
+        height: 60px;
+
+        right: 0;
+        bottom: 15px;
+
+        font-size: 11px;
+
+        border-width: 1px;
+    }
+
+    .coupon div {
+        font-size: 11px;
+    }
+
+
+    /* ---------- CONTACT + RESERVATION ---------- */
+
+    #contactpage,
+    #reservationpage {
+        min-height: auto;
+    }
+
+    .contact_top,
+    .r_top {
+        padding: 40px 15px 20px;
+    }
+
+    .contact_top h1,
+    .r_top h1 {
+        font-size: 30px;
+    }
+
+    .contact_top span,
+    .r_top span {
+        font-size: 20px;
+    }
+
+    .contact_top p,
+    .r_top p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .both,
+    .rboth {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 20px 5%;
+    }
+
+
+    /* ---------- INFORMATION BOX ---------- */
+
+    .box,
+    .rbox {
+        width: 100%;
+        max-width: 500px;
+
+        min-height: auto;
+        margin: 0;
+
+        border-radius: 25px;
+
+        padding: 25px 20px;
+    }
+
+    .top,
+    .rtop {
+        padding: 10px;
+    }
+
+    .info,
+    .rinfo {
+        padding: 9px 0;
+    }
+
+    .info_icon i,
+    .rinfo_icon i {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+        flex-shrink: 0;
+    }
+
+    .info_content h4,
+    .rinfo_content h4 {
+        font-size: 13px;
+    }
+
+    .info_content p,
+    .rinfo_content p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------- FORM BOX ---------- */
+
+    .form,
+    .rform {
+        width: 100%;
+        max-width: 500px;
+
+        min-width: 0;
+        min-height: auto;
+
+        border-radius: 25px;
+
+        padding: 20px;
+    }
+
+    .form h3,
+    .rform h3 {
+        font-size: 25px;
+        margin: 10px 10px 25px;
+    }
+
+    .form_details,
+    .rform_details {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 10px auto 25px;
+
+        position: static;
+    }
+
+    .form_details input,
+    .form_details select,
+    .form_details textarea,
+    .rform_details input,
+    .rform_details select,
+    .rform_details textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form_details textarea,
+    .rform_details textarea {
+        min-height: 100px;
+    }
+
+    /* Your HTML has inline width on reservation textarea.
+       !important is used here so it becomes responsive. */
+
+    .rform_details textarea {
+        width: 100% !important;
+        height: 100px !important;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    #btn,
+    #r_btn {
+        width: 100%;
+        max-width: 280px;
+
+        justify-content: center;
+        align-items: center;
+
+        margin: 10px auto;
+
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- SOCIAL ICONS ---------- */
+
+    #social-icons,
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding: 25px 15px 10px;
+        margin-top: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   480px and below
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* ---------- TOPBAR ---------- */
+
+    .container {
+        padding: 6px 5px;
+        gap: 5px 8px;
+    }
+
+    .container span {
+        font-size: 9px;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding: 7px 5px;
+    }
+
+    .image {
+        width: 60px;
+        height: 42px;
+    }
+
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    .brand small {
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 6px 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-links button {
+        width: 26px;
+        height: 26px;
+    }
+
+    .order-btn {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+
+    /* ---------- MARQUEE ---------- */
+
+    marquee {
+        font-size: 13px !important;
+        line-height: 27px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    #home,
+    #home img {
+        height: 380px;
+    }
+
+    #content {
+        left: 5%;
+        width: 90%;
+    }
+
+    #content h1 {
+        font-size: 26px;
+    }
+
+    #content p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- MENU ---------- */
+
+    .menu {
+        padding: 30px 4%;
+    }
+
+    .menu h2 {
+        font-size: 25px;
+    }
+
+    .menu > p {
+        font-size: 13px;
+    }
+
+    .buttons {
+        gap: 2px;
+    }
+
+    .buttons button {
+        padding: 7px 10px;
+        font-size: 11px;
+        margin: 3px 2px;
+    }
+
+    .food-items {
+        gap: 18px;
+    }
+
+    .food img {
+        height: 220px;
+    }
+
+    .food h3 {
+        font-size: 17px;
+    }
+
+    .food p {
+        font-size: 14px;
+    }
+
+
+    /* ---------- COUPON ---------- */
+
+    .coupon {
+        width: 120px;
+        height: 52px;
+
+        bottom: 10px;
+
+        font-size: 9px;
+    }
+
+    .coupon div {
+        font-size: 9px;
+    }
+
+
+    /* ---------- CONTACT / RESERVATION ---------- */
+
+    .contact_top,
+    .r_top {
+        padding: 30px 12px 15px;
+    }
+
+    .contact_top h1,
+    .r_top h1 {
+        font-size: 26px;
+    }
+
+    .contact_top p,
+    .r_top p {
+        font-size: 12px;
+    }
+
+    .both,
+    .rboth {
+        padding: 15px 4%;
+        gap: 20px;
+    }
+
+
+    /* ---------- INFO BOX ---------- */
+
+    .box,
+    .rbox {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+
+    .box h3,
+    .rbox h3 {
+        font-size: 19px;
+    }
+
+    .box p,
+    .rbox p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .info,
+    .rinfo {
+        padding: 8px 0;
+    }
+
+    .info_icon i,
+    .rinfo_icon i {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        margin-right: 8px;
+    }
+
+    .info_content h4,
+    .rinfo_content h4 {
+        font-size: 11px;
+    }
+
+    .info_content p,
+    .rinfo_content p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- FORMS ---------- */
+
+    .form,
+    .rform {
+        padding: 18px 12px;
+        border-radius: 20px;
+    }
+
+    .form h3,
+    .rform h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form_details,
+    .rform_details {
+        width: 100%;
+    }
+
+    .form_details label,
+    .rform_details label {
+        font-size: 13px;
+    }
+
+    .form_details input,
+    .form_details select,
+    .form_details textarea,
+    .rform_details input,
+    .rform_details select,
+    .rform_details textarea {
+        font-size: 13px;
+    }
+
+    #btn,
+    #r_btn {
+        width: 100%;
+        max-width: 240px;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding: 20px 10px 8px;
+    }
+
+    .footer-links {
+        gap: 8px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   360px and below
+========================================= */
+
+@media (max-width: 360px) {
+
+    .container span {
+        font-size: 8px;
+    }
+
+    .brand h2 {
+        font-size: 16px;
+    }
+
+    .brand small {
+        font-size: 7px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .order-btn {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    #home,
+    #home img {
+        height: 350px;
+    }
+
+    #content h1 {
+        font-size: 23px;
+    }
+
+    #content p {
+        font-size: 11px;
+    }
+
+    .menu h2 {
+        font-size: 22px;
+    }
+
+    .buttons button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .food img {
+        height: 200px;
+    }
+
+    .coupon {
+        width: 105px;
+        height: 48px;
+    }
+
+    .coupon div {
+        font-size: 8px;
+    }
+}
